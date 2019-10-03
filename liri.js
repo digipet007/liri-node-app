@@ -20,13 +20,15 @@ var doWhatItSays = function() {
     var command = dataArr[0];
     var lookThisUp = dataArr[1];
     console.log(lookThisUp);
-    searchSpotify(lookThisUp);
     switch(command){
       case 'spotify-this-song':
         searchSpotify(lookThisUp);
         break;
       case 'movie-this':
         getMovie(lookThisUp);
+        break;
+      case 'concert-this':
+        getVenue(lookThisUp);
         break;
       default: 
       console.log("LIRI doesn't know that");
@@ -36,15 +38,13 @@ var doWhatItSays = function() {
 
 //search the bands in town API
 var getVenue = function(artistName){
-  if (artistName.includes(" ")){
-    // artistName = artistName.split(" ");
-    console.log("has a space");
-  }
   request("https://rest.bandsintown.com/artists/" + artistName + "/events?app_id=codingbootcamp", function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
+    if (error){
+      console.log('error:', error); // Print the error if one occurred
+    }
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   var jsonData1 = JSON.parse(body);
-  // console.log('Name of the venue: ' + jsonData1[1].name);
+  console.log(artistName);
   console.log('Venue: '  + jsonData1[1].venue.name);
   console.log('Venue location (city): ' + jsonData1[1].venue.city);
   console.log('Venue location (country): ' + jsonData1[1].venue.country);
@@ -112,6 +112,7 @@ var pick = function(caseData, functionData) {
       break;
     case 'do-what-it-says':
       doWhatItSays();
+      break;
     case 'concert-this':
       getVenue(functionData);
       break;

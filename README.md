@@ -19,7 +19,8 @@ To install, access the Github page (https://github.com/digipet007/liri-node-app)
 
 After this, you will need to create a separate file within your repository called `.env` 
 
-NOTE: You will need Spotify API keys for this step. Set up a Spotify account if you don't already have one at: <https://developer.spotify.com/my-applications/#!/> Register your application and create your Spotify API keys at <https://developer.spotify.com/my-applications/#!/applications/create>
+NOTE: You will need Spotify API keys for this step. Set up a Spotify account if you don't already have one at: <https://developer.spotify.com/my-applications/#!/> 
+Register your application and create your Spotify API keys at <https://developer.spotify.com/my-applications/#!/applications/create>
 
 Then, enter the following code, replacing the values "your-spotify-id" and "your-spotify-secret" with your API keys (no quotes): 
 
@@ -56,6 +57,8 @@ liri.js can take in one of the following commands:
 
    * `node liri.js do-what-it-says`
 
+For a live demonstration of how to use this app, visit: <https://youtu.be/asly2DCG6dc>
+
 ## Built With
 
 * Javascript
@@ -66,6 +69,7 @@ The following packages were used to create this app:
 * Moment <https://www.npmjs.com/package/moment>
 * Node-Spotify-Api <https://www.npmjs.com/package/node-spotify-api>
 * Request <https://www.npmjs.com/package/request>
+* FS <https://www.npmjs.com/package/file-system>
 
 This app utilizes the following APIs:
 * Spotify <https://www.npmjs.com/package/node-spotify-api>

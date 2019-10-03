@@ -30,17 +30,16 @@ SPOTIFY_SECRET=your-spotify-secret
 
 ```
 Next, you will need to download the required NPM packages.  The required NPM packages include:
-    "axios": "^0.19.0",
-    "dotenv": "^8.1.0",
-    "moment": "^2.24.0",
-    "node-spotify-api": "^1.1.1",
-    "request": "^2.88.0",
-    "spotify": "^0.3.0"
-
+```
+* "axios": "^0.19.0",
+* "dotenv": "^8.1.0",
+* "moment": "^2.24.0",
+* "node-spotify-api": "^1.1.1",
+* "request": "^2.88.0"
+```
 Because these are listed as dependencies already in the package.json file, you may install these packages by typing `npm install` on the commandline.
 ```
 Your Liri node app should now be up and running!
-```
 
 End with an example of getting some data out of the system or using it for a little demo
 
@@ -56,22 +55,21 @@ Add additional notes about how to deploy this on a live system
 
 * Javascript
 
-The following packages wee used to create this app:
-* axios
-* dotenv
-* moment
-* node-spotify-api
-* request
-* spotify
+The following packages were used to create this app:
+* Axios <https://www.npmjs.com/package/axios>
+* DotEnv <https://www.npmjs.com/package/dotenv>
+* Moment <https://www.npmjs.com/package/moment>
+* node-spotify-api <https://www.npmjs.com/package/node-spotify-api>
+* request <https://www.npmjs.com/package/request>
 
 This app utilizes the following APIs:
-* Spotify
-* Bands in Town
-* OMDB
+* Spotify <https://www.npmjs.com/package/node-spotify-api>
+* Bands in Town <http://www.artists.bandsintown.com/bandsintown-api>
+* OMDB <http://www.omdbapi.com>
 
 ## Author
 
-**Sarah Arnold** --view my portfolio and bio: (https://digipet007.github.io/Sarahs-Portfolio/)
+**Sarah Arnold** --view my portfolio and bio: <https://digipet007.github.io/Sarahs-Portfolio/>
 
 ## Acknowledgments
 

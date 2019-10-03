@@ -1,10 +1,10 @@
-//allows file to read and set any environment variables with the packages
-// require("dotenv").config();
-
+//Packages
+require("dotenv").config();
 var Spotify = require('node-spotify-api');
 var axios = require('axios');
 var request = require('request');
 var fs = require('fs');
+var moment = require("moment");
 
 //import keys.js file and store it in a variable
 var keys = require("./keys.js");
@@ -36,6 +36,10 @@ var doWhatItSays = function() {
 
 //search the bands in town API
 var getVenue = function(artistName){
+  if (artistName.includes(" ")){
+    // artistName = artistName.split(" ");
+    console.log("has a space");
+  }
   request("https://rest.bandsintown.com/artists/" + artistName + "/events?app_id=codingbootcamp", function (error, response, body) {
   console.log('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -44,7 +48,7 @@ var getVenue = function(artistName){
   console.log('Venue: '  + jsonData1[1].venue.name);
   console.log('Venue location (city): ' + jsonData1[1].venue.city);
   console.log('Venue location (country): ' + jsonData1[1].venue.country);
-  console.log('Date of the Event: ' + jsonData1[1].datetime);
+  console.log("Date of the Event: " + moment(jsonData1[1].datetime).format("L"));
 });
 }  
 
@@ -77,22 +81,21 @@ var searchSpotify = function(songname) {
 //Search OMBD =============================================================================================================
 var getMovie = function(movieName){
   request('http://www.omdbapi.com/?t=' + movieName + '&apikey=trilogy', function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  // console.log('error:', error); // Print the error if one occurred
+  // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   
   //print OMDB movie search results to the console
   var jsonData = JSON.parse(body);
   console.log('Title: ' + jsonData.Title);
   console.log('Year: ' + jsonData.Year);
   console.log('Rated: ' + jsonData.Rated);
-  console.log('IMDB Rating: ' + jsonData.imbdRating);
+  console.log('IMDB Rating: ' + jsonData.imdbRating);
   console.log('Country: ' + jsonData.Country);
   console.log('Language: ' + jsonData.Language);
   console.log('Plot: ' + jsonData.Plot);
   console.log('Actors: ' + jsonData.Actors);
-  console.log('Rotten Tomatoes Rating: ' + jsonData.tomatoRating);
-  console.log('Rotten Tomatoes URL: ' + jsonData.tomatoURL);
-
+  console.log('Rotten Tomatoes Rating: ' + jsonData.Ratings[1].Value);
+  console.log('URL: ' + jsonData.Website);
 });
 }
 

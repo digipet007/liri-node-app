@@ -1,6 +1,7 @@
 # liri-node-app
 
 Liri is a language interpretation and recognition interface, written in Javascript. It is a node app that takes in parameters and returns data via the command line.  Liri can be used to search Spotify for songs, Bands in Town for concerts, and OMDB for movies. 
+Liri can also read these commands from a random.txt file, rather than the command line, and return the requested data to the command line.
 
 ## Getting Started
 
@@ -15,7 +16,6 @@ You will also need the Node Packet Manager installed.  For more information, vis
 ### Installing
 
 To install, access the Github page (https://github.com/digipet007/liri-node-app).  You may fork the repository and then clone it to your computer.  
-
 
 After this, you will need to create a separate file within your repository called `.env` 
 
@@ -42,15 +42,19 @@ Because these are listed as dependencies already in the package.json file, you m
 
 Your Liri node app should now be up and running!
 
-End with an example of getting some data out of the system or using it for a little demo
+## Deployment and General Use
 
-## Running the tests
+To use this app, enter the following commands on the command line:
 
-Explain how to run the automated tests for this system
+liri.js can take in one of the following commands:
 
-## Deployment
+   * `node liri.js concert-this` <"bandname" or "band name">
 
-Add additional notes about how to deploy this on a live system
+   * `node liri.js spotify-this-song` <"song or artist name">
+
+   * `node liri.js movie-this` <"movie name">
+
+   * `node liri.js do-what-it-says`
 
 ## Built With
 
@@ -60,8 +64,8 @@ The following packages were used to create this app:
 * Axios <https://www.npmjs.com/package/axios>
 * DotEnv <https://www.npmjs.com/package/dotenv>
 * Moment <https://www.npmjs.com/package/moment>
-* node-spotify-api <https://www.npmjs.com/package/node-spotify-api>
-* request <https://www.npmjs.com/package/request>
+* Node-Spotify-Api <https://www.npmjs.com/package/node-spotify-api>
+* Request <https://www.npmjs.com/package/request>
 
 This app utilizes the following APIs:
 * Spotify <https://www.npmjs.com/package/node-spotify-api>

@@ -16,13 +16,14 @@ You will also need the Node Packet Manager installed.  For more information, vis
 
 To install, access the Github page (https://github.com/digipet007/liri-node-app).  You may fork the repository and then clone it to your computer.  
 
-```
+
 After this, you will need to create a separate file within your repository called `.env` 
 
 NOTE: You will need Spotify API keys for this step. Set up a Spotify account if you don't already have one at: <https://developer.spotify.com/my-applications/#!/> Register your application and create your Spotify API keys at <https://developer.spotify.com/my-applications/#!/applications/create>
 
 Then, enter the following code, replacing the values "your-spotify-id" and "your-spotify-secret" with your API keys (no quotes): 
 
+```
 # Spotify API keys
 
 SPOTIFY_ID=your-spotify-id
@@ -38,7 +39,7 @@ Next, you will need to download the required NPM packages.  The required NPM pac
 * "request": "^2.88.0"
 ```
 Because these are listed as dependencies already in the package.json file, you may install these packages by typing `npm install` on the commandline.
-```
+
 Your Liri node app should now be up and running!
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -69,7 +70,7 @@ This app utilizes the following APIs:
 
 ## Author
 
-**Sarah Arnold** --view my portfolio and bio: <https://digipet007.github.io/Sarahs-Portfolio/>
+* **Sarah Arnold** --view my portfolio and bio: <https://digipet007.github.io/Sarahs-Portfolio/>
 
 ## Acknowledgments
 

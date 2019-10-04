@@ -102,7 +102,7 @@ var getMovie = function(movieName){
 //switch cases allow users to specify the function
 var pick = function(caseData, functionData) {
   caseData = process.argv[2];
-  functionData = process.argv[3];
+  functionData = process.argv.slice(3).join("+");
   switch(caseData){
     case 'spotify-this-song':
       searchSpotify(functionData);

@@ -58,6 +58,7 @@ liri.js can take in one of the following commands:
    * `node liri.js do-what-it-says`
 
 For a live demonstration of how to use this app:
+NOTE: Contrary to the video, last parameter no longer needs to be entered in quotations. 
 
 [![liri.js command line](http://img.youtube.com/vi/asly2DCG6dc/0.jpg)](http://www.youtube.com/watch?v=asly2DCG6dc "Liri.js")
 
